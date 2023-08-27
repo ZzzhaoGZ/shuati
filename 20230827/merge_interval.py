@@ -8,6 +8,7 @@
 from typing import List
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        if not intervals: return []
         intervals.sort()
         ans = [intervals[0]]
         for s, e in intervals[1:]:
